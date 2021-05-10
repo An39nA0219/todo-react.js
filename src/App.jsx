@@ -1,13 +1,13 @@
+import ColorfulMessage from "./components/ColorfulMessage";
+
 const App = () => {
   const onClickButton = () => alert();
-  const contentStyle = {
-    color: "blue",
-    fontSize: "25px"
-  };
+
   return (
     <>
       <h1 style={{ color: "red" }}>こんにちは～</h1>
-      <p style={contentStyle}>いい天気ですね～</p>
+      <ColorfulMessage color="blue">どんな天気ですか？</ColorfulMessage>
+      <ColorfulMessage color="pink">いい天気ですよ</ColorfulMessage>
       <button onClick={onClickButton}>ボタン</button>
     </>
   );
@@ -19,6 +19,8 @@ const App = () => {
 // スタイルを適応させるときは、style={}の中にスタイルを入れていく。
 // このstyleの中に{color: 'red'}というように入れていく。
 // スタイルシートの書き方ではなく、JSの書き方なので、やや特殊な書き方です。
+
+// Propsとは、コンポーネントに渡す引数のようなもの
 
 // このページのApp関数は、このままだとこのページでしか使えないまま…
 // export することで他でも使えるようにする
